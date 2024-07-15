@@ -1,36 +1,23 @@
 #include<iostream>
+#include<array>
 using namespace std;
-int main(){
-    int a[5]={1,3,5,7,9};
-    cout<<"Completely Initialized Int Array A : "<<endl;
-    for(int x : a) //For each loop very easy and important for Array data structure.
-    //read as for x in array a.
-    //For each looop iterates through elements of the Array. Introduced in C++ 11
-    cout<<x<<endl;
-    cout<<endl;
-    int b[6]={1,3,5}; //Keeping the array incomplete to see what is the outcome result.
-    cout<<"Partial Initialized Int Array B : "<<endl;
-    for(int y : b)//Shows that for each loop will work according to size of Array and not according to the number of elements initialized int he Array.
-    cout<<y<<endl;
-    cout<<endl;
+int main()
+{
+    array<int,4> a = {3,4,2,7};
+    int size = a.size();
+    cout<<"Size of array: "<<size<<endl;
 
-    float d[6]={12.6,82.4,43.6,4.54,77.48,84.88};//No need to know the type of Array.
-    cout<<"Completely Initialized Float Array D with Auto : "<<endl;
-    for(auto z : d)
-        cout<<z<<endl;
-        cout<<endl;
+    cout<<"Array at 3: "<<a.at(3);
 
-    float c[6]={1.2,2.4,3.6,48.54,99.48,54.88};
-    cout<<"Completely Initialized Float Array C: ";
-    for(float z : c)
-        cout<<z<<endl;
-    cout<<endl;
+    cout<<endl<<"Is array Empty: "<<a.empty();
 
-    char e[5]={'A',66,'C',68,'E'};//No need to know the type of Array.
-    cout<<"Completely Initialized Char Array E with Auto : "<<endl;
-    for(auto z : e)
-        cout<<z<<endl;
-    cout<<endl;
-    return 0;
+
+    cout<<"Element at index="<<a.at(3)<<endl;
+    bool trueFalse=a.empty();
+    cout<<"true or flase= "<<trueFalse<<endl;
+    bool empty=a.empty();
+    cout<<"Is array is empty or not ="<<empty<<endl;
+    cout<<"first element = "<<a.front()<<endl;
+    cout<<"last element = "<<a.back()<<endl;
 
 }
